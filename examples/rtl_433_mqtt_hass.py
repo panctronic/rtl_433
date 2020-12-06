@@ -211,28 +211,6 @@ mappings = {
         }
     },
 
-    "wind_avg_km_h": {
-        "device_type": "sensor",
-        "object_suffix": "WS",
-        "config": {
-            "device_class": "weather",
-            "name": "Wind Speed",
-            "unit_of_measurement": "km/h",
-            "value_template": "{{ value|float }}"
-        }
-    },
-
-    "wind_avg_mi_h": {
-        "device_type": "sensor",
-        "object_suffix": "WS",
-        "config": {
-            "device_class": "weather",
-            "name": "Wind Speed",
-            "unit_of_measurement": "mi/h",
-            "value_template": "{{ value|float }}"
-        }
-    },
-
     "wind_avg_m_s": {
         "device_type": "sensor",
         "object_suffix": "WS",
@@ -413,56 +391,6 @@ mappings = {
         }
     },
 
-    "lux": {
-        "device_type": "sensor",
-        "object_suffix": "lux",
-        "config": {
-            "device_class": "weather",
-            "name": "Outside Luminancee",
-            "unit_of_measurement": "lux",
-            "value_template": "{{ value|int }}"
-        }
-    },
-
-    "uv": {
-        "device_type": "sensor",
-        "object_suffix": "uv",
-        "config": {
-            "device_class": "weather",
-            "name": "UV Index",
-            "unit_of_measurement": "UV Index",
-            "value_template": "{{ value|int }}"
-        }
-    },
-
-    "storm_dist": {
-        "device_type": "sensor",
-        "object_suffix": "stdist",
-        "config": {
-            "name": "Lightning Distance",
-            "unit_of_measurement": "mi",
-            "value_template": "{{ value|int }}"
-        }
-    },
-
-    "strike_distance": {
-        "device_type": "sensor",
-        "object_suffix": "stdist",
-        "config": {
-            "name": "Lightning Distance",
-            "unit_of_measurement": "mi",
-            "value_template": "{{ value|int }}"
-        }
-    },
-
-    "strike_count": {
-        "device_type": "sensor",
-        "object_suffix": "strcnt",
-        "config": {
-            "name": "Lightning Strike Count",
-            "value_template": "{{ value|int }}"
-        }
-    },
 }
 
 
