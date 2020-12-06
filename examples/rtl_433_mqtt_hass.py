@@ -163,7 +163,7 @@ mappings = {
             "device_class": "battery",
             "name": "Battery",
             "unit_of_measurement": "%",
-            "value_template": "{{ float(value|int) * 99 + 1 }}"
+            "value_template": "{{ int(value) * 100 }}"
         }
     },
 
@@ -204,20 +204,19 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "WS",
         "config": {
-            "device_class": "weather",
             "name": "Wind Speed",
             "unit_of_measurement": "km/h",
             "value_template": "{{ value|float }}"
         }
     },
 
-    "wind_avg_m_s": {
+    "wind_avg_km_h": {
         "device_type": "sensor",
         "object_suffix": "WS",
         "config": {
             "name": "Wind Average",
             "unit_of_measurement": "km/h",
-            "value_template": "{{ float(value|float) * 3.6 | round(2) }}"
+            "value_template": "{{ value|float }}"
         }
     },
 
@@ -279,7 +278,6 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "RT",
         "config": {
-            "device_class": "weather",
             "name": "Rain Total",
             "unit_of_measurement": "mm",
             "value_template": "{{ value|float }}"
@@ -392,7 +390,6 @@ mappings = {
     },
 
 }
-
 
 def mqtt_connect(client, userdata, flags, rc):
     """Callback for MQTT connects."""
