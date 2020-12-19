@@ -267,7 +267,6 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "WD",
         "config": {
-            "device_class": "weather",
             "name": "Wind Direction",
             "unit_of_measurement": "°",
             "value_template": "{{ value|float }}"
