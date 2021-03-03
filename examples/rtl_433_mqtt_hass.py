@@ -224,7 +224,6 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "WS",
         "config": {
-            "device_class": "weather",
             "name": "Wind Speed",
             "unit_of_measurement": "km/h",
             "value_template": "{{ float(value|float) * 3.6 }}"
@@ -235,7 +234,6 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "GS",
         "config": {
-            "device_class": "weather",
             "name": "Gust Speed",
             "unit_of_measurement": "km/h",
             "value_template": "{{ value|float }}"
@@ -256,7 +254,6 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "GS",
         "config": {
-            "device_class": "weather",
             "name": "Gust Speed",
             "unit_of_measurement": "km/h",
             "value_template": "{{ float(value|float) * 3.6 }}"
@@ -287,7 +284,6 @@ mappings = {
         "device_type": "sensor",
         "object_suffix": "RR",
         "config": {
-            "device_class": "weather",
             "name": "Rain Rate",
             "unit_of_measurement": "mm/h",
             "value_template": "{{ value|float }}"
@@ -469,7 +465,7 @@ def publish_config(mqttc, topic, model, instance, mapping):
     if args.debug:
         print(path,":",json.dumps(config))
 
-    mqttc.publish(path, json.dumps(config), args.retain)
+    mqttc.publish(path, json.dumps(config), retain=args.retain)
 
     return True
 
